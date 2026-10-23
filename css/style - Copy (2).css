@@ -1,0 +1,30 @@
+/* 1. Mobile-First Grid & Stacking */
+/* Default Mobile: 1 Column Stack */
+.hero-grid, .content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    /* Desktop Expansion (768px) */
+    @media (min-width: 768px) {
+        .hero-grid {
+            grid-template-columns: 2fr 1fr;
+        }
+        .content-grid {
+            grid-template-columns: 3fr 1fr;
+        }
+    }
+}
+
+/* 2. Inner Components & Flexbox */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+}
+.card button {
+     margin-top: auto;
+    }
